@@ -1,0 +1,259 @@
+/* Style Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* Variables */
+:root {
+    --text-colour: #000;
+    --light-text-colour: #fff;
+    --main-1: #539A9D;
+    --secondary: #8CC1BF;
+    --tertiary: #A9D98F;
+
+    --large-text: 4.5rem;
+    --announcement-text: 2rem;
+    --nav-text: 1.2rem;
+    --btn-text: 1.1rem;
+    --section-titles: 3rem;
+}
+
+/* Global settings */
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 8vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 2% 10%;
+}
+
+.bold-5 {
+    font-weight: 500;
+}
+.bold-7 {
+    font-weight: 700;
+}
+.bold-8 {
+    font-weight: 800;
+}
+
+.title {
+    font-size: var(--section-titles);
+}
+/* title small */
+.title-sm {
+    font-size: calc(var(--section-titles) - 0.5rem);
+}
+/* title very small */
+.title-vsm {
+    font-size: calc(var(--section-titles) - 1.5rem);
+}
+
+.bg-main {
+    background-color: var(--main-1);
+}
+
+.btn {
+    padding: 0.3rem 1.55rem;
+    background-color: var(--light-text-colour);
+    border-radius: 30px;
+    color: var(--text-colour);
+    text-decoration: none;
+    font-size: var(--btn-text);
+    transition: scale ease-in-out 0.15s;
+    display: inline-block;
+}
+
+.btn:hover {
+    /* font-size: calc(var(--btn-text) + 0.1rem); */
+    scale: 1.1;
+}
+
+.btn-green {
+    background-color: var(--tertiary);
+    border: solid;
+    border-color: var(--tertiary);
+}
+
+.btn-green-outline {
+    background-color: transparent;
+    border: solid;
+    border-color: var(--tertiary);
+}
+
+.t-light {
+    color: var(--light-text-colour)
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 8vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2%;
+
+    background-color: #fff;
+
+    z-index: 100;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-colour);
+    font-size: var(--nav-text);
+}
+
+#right-nav {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#right-nav a:hover {
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+#right-nav a.active {
+    font-weight: 600;
+}
+
+#nav-logo {
+    height: 7vh;
+}
+
+/* Announcements Section */
+#announcements-ribbon {
+    width: 100vw;
+    padding: 2vh 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--light-text-colour);
+}
+
+/* Hero section */
+#hero {
+    background-image: url("/Images/Shuttlecocks.png");
+    background-position: 100% 75%;
+    background-size: 115%;
+    background-repeat: no-repeat;
+
+    position: relative;
+    height: 80vh;
+    
+    padding: 5%;
+
+    clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(2px) brightness(0.6);
+    -webkit-backdrop-filter: blur(2px) brightness(0.6);
+    z-index: 1;
+}
+
+#hero #hero-text {
+    z-index: 2;
+    position: absolute;
+    color: var(--light-text-colour);
+    right: 0;
+    top: 40%;
+    translate: -5% -50%;
+    text-align: right;
+
+    width: 50%;
+}
+
+#hero #hero-text #hero-title {
+    font-size: var(--large-text);
+}
+
+#hero #hero-text #hero-subtext {
+    font-size: var(--nav-text);
+}
+
+#hero #hero-buttons {
+    margin-top: 3%;
+}
+
+#hero #hero-buttons a:first-child {
+    margin-right: 2%;
+}
+
+/* Our Club Section */
+#our-club {
+    min-height: 100vh;
+}
+
+#club-upper-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#club-upper-content img {
+    margin-left: calc(85% - 45%);
+    border-radius: 15px;
+    width: 45%;
+    margin-top: -15%;
+    aspect-ratio: 2 / 2.5;
+    object-fit: cover;
+    object-position: 70%;
+}
+
+/* Image carousel */
+#club-img-carousel {
+    min-width: 110vw;
+    margin: 10% -20vw 5% -20vw;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    gap: 20px;
+}
+
+#club-img-carousel img {
+    border-radius: 15px;
+}
+
+/* Club info and times section */
+#times-section-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+    margin: auto;
+}
+
+#times-section-grid div {
+    padding: 1% 0;
+}
+
+#times-section-grid div:nth-child(2) {
+    text-align: right;
+}
+
+#play-times-title {
+    text-align: center;
+}
