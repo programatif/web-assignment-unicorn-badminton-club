@@ -5,14 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Unicorn Badminton Club</title>
+
+    <!-- Leaflet maps API -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
     <!-- Navbar -->
     <nav>
         <!-- Logo -->
-        <img id="nav-logo" src="/Images/Logo.png" alt="Unicorn Badminton Club">
+        <img id="nav-logo" src="/Images/Logo.png" alt="Unicorn Badminton Club Logo">
 
         <!-- Navigation Links -->
         <div id="right-nav">
@@ -107,7 +114,79 @@
         </div>
     </section>
 
+    <section id="where-to-find-us">
+        <h1 class="title bold-8">Where to Find Us</h1>
+        <div id="find-us-grid">
+            <div id="map-container">
+                <iframe id="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2509.957284989941!2d-3.119894223409186!3d51.016937971705914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486df46062c517c3%3A0xd13ffae589f6534a!2sThe%20Castle%20School!5e0!3m2!1sen!2suk!4v1775126860330!5m2!1sen!2suk"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                Our home venue is the sports hall at <span class="bold-7">The Castle School, Wellington Road,
+                    Taunton</span> (TA1 5AU for your
+                satnav).
+                <br><br>
+                Please note that <span class="bold-7">car parking is by the tennis/netball courts to the rear of the
+                    school</span> in the area shown
+                on the map - parking elsewhere on the neighbouring Bridgwater & Taunton College site may incur a fine.
+            </div>
+            <div id="contact-form-find-us">
+                <form action="none">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name_input" required placeholder="Name">
 
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email_input" required placeholder="email@example.com">
+
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message_input" required
+                        placeholder="What do you want to say?"></textarea>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="footer-column branding">
+                <div class="logo">
+                    <img src="Images/Logo.png" alt="Unicorn Badminton Club Logo">
+                </div>
+                <p>Unicorn Badminton Club is a small, friendly club of league and club players, students, junior players
+                    and coaches.</p>
+            </div>
+
+            <div class="footer-column links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#play-times">Club Info</a></li>
+                    <li><a href="#where-to-find-us">How to find us</a></li>
+                    <li><a href="#">Get in contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column newsletter">
+                <h3>Newsletter</h3>
+                <div class="input-wrapper">
+                    <input type="email" placeholder="Enter your email">
+                    <span class="mail-icon">✉</span>
+                </div>
+                <p>Subscribe to our newsletter and be the first to hear about any club announcements.</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 All rights reserved</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>
