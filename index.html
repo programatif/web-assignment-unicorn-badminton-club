@@ -6,24 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Unicorn Badminton Club</title>
 
-    <!-- Leaflet maps API -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <link rel="stylesheet" href="style.css">
+    <!-- DaisyUI CDN for UI components -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <!-- Accessibility menu as a "FAB" (Floating Action Button) - from DaisyUI components -->
+   <div class="fab">
+    <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-primary">
+        <i class="bi bi-universal-access-circle text-2xl"></i>
+    </div>
+
+    <div>
+        <button id="theme-cycle" class="btn btn-lg btn-circle" title="Toggle Theme">
+            <i id="theme-icon" class="bi bi-display"></i>
+        </button>
+    </div>
+
+    <div>
+        <button id="font-cycle" class="btn btn-lg btn-circle" title="Toggle Font Size">
+            <i id="font-icon" class="bi bi-type"></i>
+        </button>
+    </div>
+
+    <div>
+        <button id="contrast-cycle" class="btn btn-lg btn-circle" title="Toggle Contrast">
+            <i id="contrast-icon" class="bi bi-circle-half"></i>
+        </button>
+    </div>
+</div>
+
     <!-- Navbar -->
     <nav>
-        <!-- Logo -->
         <img id="nav-logo" src="/Images/Logo.png" alt="Unicorn Badminton Club Logo">
 
-        <!-- Navigation Links -->
-        <div id="right-nav">
+        <div id="mobile-menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div id="mobile-flyout">
             <a href="#" class="active">Home</a>
+            <a href="#">Contact Us <span>↗</span></a>
+            <a href="#">Pricing <span>↗</span></a>
+            <a href="#">Info <span>↗</span></a>
+        </div>
+
+        <div id="right-nav">
+            <a href="index.html" class="active">Home</a>
             <a href="#">Contact Us</a>
             <a href="#">Pricing</a>
             <a href="#">Info</a>
@@ -31,10 +69,10 @@
     </nav>
 
     <!-- Announcements -->
-    <section id="announcements-ribbon" class="bg-main">
+    <header id="announcements-ribbon" class="bg-main">
         <p>Testing announcement</p>
         <!-- Filled by JS -->
-    </section>
+    </header>
 
     <!-- Hero section -->
     <section id="hero">
@@ -42,8 +80,8 @@
             <h1 id="hero-title" class="bold-8">Unicorn<br>Badminton Club</h1>
             <p id="hero-subtext">The local, friendly badminton league</p>
             <div id="hero-buttons">
-                <a href="#" class="btn btn-green">Reserve a Spot</a>
-                <a href="#" class="btn btn-green-outline t-light">Find Out More</a>
+                <a href="#" class="button btn-green">Reserve a Spot</a>
+                <a href="#" class="button btn-green-outline t-light">Find Out More</a>
             </div>
         </div>
     </section>
@@ -78,7 +116,7 @@
 
     <!-- Play Times -->
     <section id="play-times">
-        <h1 id="play-times-title" class="title bold">Play Times and Information</h1>
+        <h1 id="play-times-title" class="title bold-8 mb-10">Play Times and Information</h1>
         <div id="times-section-grid">
             <div id="adults-and-students">
                 <p class="title-sm bold-5">Adults and Students</p>
@@ -97,7 +135,7 @@
                     holidays and Christmas/Easter holidays, and occasional school use of the hall for exams).
                 </p>
                 <br>
-                <a href="#" class="btn btn-green">Find Out More</a>
+                <a href="#" class="button btn-green">Find Out More</a>
             </div>
             <div id="juniors-improvers">
                 <p class="title-sm bold-5">Juniors: Improvers</p>
@@ -109,13 +147,76 @@
                     holidays and Christmas/Easter holidays, and occasional school use of the hall for exams.).
                 </p>
                 <br>
-                <a href="#" class="btn btn-green">Find Out More</a>
+                <a href="#" class="button btn-green">Find Out More</a>
             </div>
         </div>
     </section>
 
+    <section id="meet-committee" class="text-center">
+        <h1 class="title bold-8 mb-10 t-light">Meet the Club Committee</h1>
+        <div id="committee-members">
+
+            <div class="max-w-75 rounded overflow-hidden shadow-lg card">
+                <img class="w-100" src="/Images/man.png" alt="Example of a club committee member">
+                <div class="px-6 py-4 card-text-block">
+                    <div class="font-bold mb-2">Steve Harrison</div>
+                    <p class="text-base">
+                        Chair Person/Coach
+                    </p>
+                </div>
+            </div>
+
+            <div class="max-w-75 rounded overflow-hidden shadow-lg card">
+                <img class="w-100" src="/Images/man.png" alt="Example of a club committee member">
+                <div class="px-6 py-4 card-text-block">
+                    <div class="font-bold mb-2">Martyn Giles</div>
+                    <p class="text-base">
+                        Secretary/Coach
+                    </p>
+                </div>
+            </div>
+            <div class="max-w-75 rounded overflow-hidden shadow-lg card">
+                <img class="w-100" src="/Images/man.png" alt="Example of a club committee member">
+                <div class="px-6 py-4 card-text-block">
+                    <div class="font-bold mb-2"> Vic Pizzey</div>
+                    <p class="text-base">
+                        Treasurer
+                    </p>
+                </div>
+            </div>
+            <div class="max-w-75 rounded overflow-hidden shadow-lg card">
+                <img class="w-100" src="/Images/man.png" alt="Example of a club committee member">
+                <div class="px-6 py-4 card-text-block">
+                    <div class="font-bold mb-2">Kez Cracknell</div>
+                    <p class="text-base">
+                        Fixtures
+                    </p>
+                </div>
+            </div>
+            <div class="max-w-75 rounded overflow-hidden shadow-lg card">
+                <img class="w-100" src="/Images/man.png" alt="Example of a club committee member">
+                <div class="px-6 py-4 card-text-block">
+                    <div class="font-bold mb-2">Geoff Roberts</div>
+                    <p class="text-base">
+                        Coach
+                    </p>
+                </div>
+            </div>
+            <div class="max-w-75 rounded overflow-hidden shadow-lg card">
+                <img class="w-100" src="/Images/man.png" alt="Example of a club committee member">
+                <div class="px-6 py-4 card-text-block">
+                    <div class="font-bold mb-2">Lucy Paul</div>
+                    <p class="text-base">
+                        Coach/Parent
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <section id="where-to-find-us">
-        <h1 class="title bold-8">Where to Find Us</h1>
+        <h1 class="title bold-8 mb-10">Where to Find Us</h1>
         <div id="find-us-grid">
             <div id="map-container">
                 <iframe id="map"
@@ -131,17 +232,22 @@
                 on the map - parking elsewhere on the neighbouring Bridgwater & Taunton College site may incur a fine.
             </div>
             <div id="contact-form-find-us">
-                <form action="none">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name_input" required placeholder="Name">
+                <div id="form-wrapper">
+                    <form action="none">
+                        <h2 class="bold-5 text-3xl text-center mb-5 mt-2">Contact Us</h2>
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name_input" required placeholder="Name">
 
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email_input" required placeholder="email@example.com">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email_input" required placeholder="email@example.com">
 
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message_input" required
-                        placeholder="What do you want to say?"></textarea>
-                </form>
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message_input" required placeholder="What do you want to say?"
+                            rows="4"></textarea>
+
+                        <button type="submit" class="button btn-green mt-5 mx-20">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
