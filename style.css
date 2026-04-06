@@ -82,6 +82,7 @@ textarea {
 
 .bg-main {
     background-color: var(--main-1);
+    border-color: var(--main-1);
 }
 
 .button {

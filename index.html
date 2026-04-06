@@ -19,29 +19,29 @@
 <body>
 
     <!-- Accessibility menu as a "FAB" (Floating Action Button) - from DaisyUI components -->
-   <div class="fab">
-    <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-primary">
-        <i class="bi bi-universal-access-circle text-2xl"></i>
-    </div>
+    <div class="fab">
+        <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-primary bg-main">
+            <i class="bi bi-universal-access-circle text-2xl"></i>
+        </div>
 
-    <div>
-        <button id="theme-cycle" class="btn btn-lg btn-circle" title="Toggle Theme">
-            <i id="theme-icon" class="bi bi-display"></i>
-        </button>
-    </div>
+        <div>
+            <button id="theme-cycle" class="btn btn-lg btn-circle" title="Toggle Theme">
+                <i id="theme-icon" class="bi bi-display"></i>
+            </button>
+        </div>
 
-    <div>
-        <button id="font-cycle" class="btn btn-lg btn-circle" title="Toggle Font Size">
-            <i id="font-icon" class="bi bi-type"></i>
-        </button>
-    </div>
+        <div>
+            <button id="font-cycle" class="btn btn-lg btn-circle" title="Toggle Font Size">
+                <i id="font-icon" class="bi bi-type"></i>
+            </button>
+        </div>
 
-    <div>
-        <button id="contrast-cycle" class="btn btn-lg btn-circle" title="Toggle Contrast">
-            <i id="contrast-icon" class="bi bi-circle-half"></i>
-        </button>
+        <div>
+            <button id="contrast-cycle" class="btn btn-lg btn-circle" title="Toggle Contrast">
+                <i id="contrast-icon" class="bi bi-circle-half"></i>
+            </button>
+        </div>
     </div>
-</div>
 
     <!-- Navbar -->
     <nav>
@@ -54,15 +54,15 @@
         </div>
 
         <div id="mobile-flyout">
-            <a href="#" class="active">Home</a>
-            <a href="#">Contact Us <span>↗</span></a>
+            <a href="index.html" class="active">Home</a>
+            <a href="#where-to-find-us">Contact Us <span>↗</span></a>
             <a href="#">Pricing <span>↗</span></a>
             <a href="#">Info <span>↗</span></a>
         </div>
 
         <div id="right-nav">
             <a href="index.html" class="active">Home</a>
-            <a href="#">Contact Us</a>
+            <a href="#where-to-find-us">Contact Us</a>
             <a href="#">Pricing</a>
             <a href="#">Info</a>
         </div>
@@ -233,17 +233,22 @@
             </div>
             <div id="contact-form-find-us">
                 <div id="form-wrapper">
-                    <form action="none">
+                    <!-- Sending form with the formsubmit API -->
+                    <form action="https://formsubmit.co/tif23000460@ucscollegegroup.ac.uk" method="post">
+                        <input type="hidden" name="_autoresponse" value="We have recieved feedback from you!">
+                        <input type="hidden" name="_subject" value="New Website Contact!">
                         <h2 class="bold-5 text-3xl text-center mb-5 mt-2">Contact Us</h2>
-                        <label for="name">Name</label>
+                        <label for="name">Name *</label>
                         <input type="text" name="name" id="name_input" required placeholder="Name">
 
-                        <label for="email">Email</label>
+                        <label for="email">Email *</label>
                         <input type="email" name="email" id="email_input" required placeholder="email@example.com">
 
-                        <label for="message">Message</label>
+                        <label for="message">Message *</label>
                         <textarea name="message" id="message_input" required placeholder="What do you want to say?"
                             rows="4"></textarea>
+
+                        <input type="text" name="_honey" style="display:none">
 
                         <button type="submit" class="button btn-green mt-5 mx-20">Submit</button>
                     </form>
@@ -291,6 +296,10 @@
         </div>
     </footer>
 
+
+    <!-- Importing GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <script src="script.js"></script>
 </body>
