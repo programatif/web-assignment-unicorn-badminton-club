@@ -4,17 +4,36 @@
 
 /* Variables */
 :root {
-    --text-colour: #000;
-    --light-text-colour: #fff;
     --main-1: #539A9D;
     --secondary: #8CC1BF;
     --tertiary: #A9D98F;
+
+    --bg-color: #ffffff;
+    --text-colour: #1a1c20;
+    --light-text-colour: #ffffff;
+    --nav-bg: #ffffff;
+    --card-bg: #ffffff;
+    --input-bg: rgba(255, 255, 255, 0.8);
+    --input-border: rgba(0, 0, 0, 0.1);
+    --footer-bg: #1a1c20;
+    --glass-bg: rgba(255, 255, 255, 0.555);
 
     --large-text: 4.5rem;
     --announcement-text: 2rem;
     --nav-text: 1.2rem;
     --btn-text: 1.1rem;
     --section-titles: 3rem;
+}
+
+/* Dark mode only variable overrides */
+[data-theme="dark"] {
+    --bg-color: #1d232a; /* DaisyUI default dark neutral */
+    --text-colour: #f2f2f2;
+    --nav-bg: #15191e;
+    --card-bg: #191e24;
+    --input-bg: rgba(255, 255, 255, 0.2);
+    --input-border: rgba(255, 255, 255, 0.2);
+    --glass-bg: rgba(0, 0, 0, 0.555);
 }
 
 /* Global settings */
@@ -35,6 +54,8 @@ body {
     margin: 0;
     padding: 0;
     margin-top: 8vh;
+    background-color: var(--bg-color);
+    color: var(--text-colour);
 }
 
 section {
@@ -43,14 +64,15 @@ section {
 
 label {
     padding-top: 3%;
+    color: var(--input-text-colour);
 }
 
 input,
 textarea {
     border-radius: 5px;
-    border: none;
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(255, 255, 255, 1);
+    background: var(--input-bg);
+    border: 1px solid var(--input-border);
+    color: var(--input-text-colour);
     padding: 1%;
 }
 
@@ -96,7 +118,7 @@ textarea {
     display: inline-block;
 }
 
-.btn:hover {
+.button:hover {
     scale: 1.1;
     cursor: pointer;
 }
@@ -118,8 +140,9 @@ textarea {
 }
 
 .card {
-    background-color: var(--light-text-colour);
     position: relative;
+    background-color: var(--card-bg);
+    color: var(--text-colour);
 }
 
 .card-text-block {
@@ -145,7 +168,7 @@ nav {
     justify-content: space-between;
     padding: 2%;
 
-    background-color: #fff;
+    background-color: var(--nav-bg);
 
     z-index: 50;
 }
@@ -281,13 +304,13 @@ nav a {
 #meet-committee::before {
     content: '';
     background-color: var(--main-1);
-    height: 100%;
+    height: 80%;
     width: 200%;
     position: absolute;
-    top: -10%;
+    top: 4%;
     left: -50%;
     rotate: 2.75deg;
-    z-index: -1;
+    z-index: 0;
 }
 
 #committee-members {
@@ -314,10 +337,12 @@ nav a {
     grid-template-rows: repeat(3, 1fr);
     width: 100%;
     margin: auto;
+    z-index: 2;
 }
 
 #times-section-grid div {
     padding: 1% 0;
+    z-index: 2;
 }
 
 #times-section-grid div:nth-child(2) {
@@ -368,7 +393,7 @@ nav a {
 }
 
 #form-wrapper form {
-    background: rgba(255, 255, 255, 0.555);
+    background: var(--glass-bg);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5.6px);
@@ -533,14 +558,14 @@ nav a {
     right: -100%;
     width: 70%;
     height: 92vh;
-    background-color: #fff;
+    background-color: var(--nav-bg);
+    color: var(--text-colour);
     z-index: 102;
     display: flex;
     flex-direction: column;
     padding: 2rem;
     gap: 1.5rem;
     transition: right 0.3s ease-in-out;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Show state */

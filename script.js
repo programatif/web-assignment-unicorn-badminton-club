@@ -10,9 +10,7 @@ if (menuIcon && flyout) {
 }
 
 // Accessibility Settings
-
 const themes = [
-    { name: 'system', icon: 'bi-display' },
     { name: 'light', icon: 'bi-sun-fill' },
     { name: 'dark', icon: 'bi-moon-stars-fill' }
 ];
@@ -23,26 +21,16 @@ const fontSizes = [
     { name: 'text-xl', icon: 'bi-type-h1', label: 'Large' }
 ];
 
-const contrasts = [
-    { name: 'normal', icon: 'bi-circle-half' },
-    { name: 'high-contrast', icon: 'bi-circle-fill' }
-];
-
-// Persists the setting and updates the DOM
 function applySetting(storageKey, list, val) {
     const state = list[val];
-    
+
     // Remove all possible classes for this category
     list.forEach(item => document.documentElement.classList.remove(item.name));
-    
-    // Add new class (unless it's a default like 'system' or 'normal')
-    if (state.name !== 'system' && state.name !== 'normal') {
-        document.documentElement.classList.add(state.name);
-    }
 
-    // Special handling for data-theme attribute
+    document.documentElement.classList.add(state.name);
+
     if (storageKey === 'theme') {
-        document.documentElement.setAttribute('data-theme', state.name === 'system' ? '' : state.name);
+        document.documentElement.setAttribute('data-theme', state.name);
     }
 
     // Save to localStorage
@@ -69,19 +57,16 @@ function setupCycle(btnId, storageKey, list, val) {
     return val;
 }
 
-// Load initial values from localStorage (defaulting if not found)
+// Load initial values from localStorage (defaulting to light mode and normal font)
 let themeVal = parseInt(localStorage.getItem('theme')) || 0;
 let fontVal = parseInt(localStorage.getItem('font')) || 1;
-let contrastVal = parseInt(localStorage.getItem('contrast')) || 0;
 
 // Apply saved settings on page load
 applySetting('theme', themes, themeVal);
 applySetting('font', fontSizes, fontVal);
-applySetting('contrast', contrasts, contrastVal);
 
 themeVal = setupCycle('theme-cycle', 'theme', themes, themeVal);
 fontVal = setupCycle('font-cycle', 'font', fontSizes, fontVal);
-contrastVal = setupCycle('contrast-cycle', 'contrast', contrasts, contrastVal);
 
 // GSAP Animations
 gsap.registerPlugin(ScrollTrigger);
