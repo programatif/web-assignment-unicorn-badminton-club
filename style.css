@@ -27,7 +27,8 @@
 
 /* Dark mode only variable overrides */
 [data-theme="dark"] {
-    --bg-color: #1d232a; /* DaisyUI default dark neutral */
+    --bg-color: #1d232a;
+    /* DaisyUI default dark neutral */
     --text-colour: #f2f2f2;
     --nav-bg: #15191e;
     --card-bg: #191e24;
@@ -429,7 +430,7 @@ nav a {
     padding: 60px 0 20px 0;
     position: relative;
     overflow: hidden;
-    z-index: 200;
+    z-index: 1;
 }
 
 /* Footer Background Shuttlecock */
@@ -612,9 +613,10 @@ nav a {
 /* Turn off hover effects on devices that do not have a mouse 
 - works better than just targeting screen size because you don't want hover effects on an ipad screen */
 @media (hover: none) {
-    * {
+    .button:hover,
+    .card:hover {
         transform: none !important;
-        scale: none !important;
+        scale: 1 !important;
     }
 }
 
@@ -706,6 +708,10 @@ nav a {
         background-position: center;
         background-repeat: no-repeat;
         text-align: center;
+        clip-path: none;
+    }
+
+    #pricing-hero {
         clip-path: none;
     }
 
