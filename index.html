@@ -66,8 +66,8 @@
 
     <!-- Announcements -->
     <header id="announcements-ribbon" class="bg-main">
-        <p>Testing announcement</p>
-        <!-- Filled by JS -->
+        <!-- Filled in by JS -->
+        <marquee id="scrolling-announcements" direction="left"></marquee>
     </header>
 
     <!-- Hero section -->
@@ -101,12 +101,12 @@
 
         <!-- Image carousel -->
         <div id="club-img-carousel">
-            <img src="Images/image (1).png" alt="">
-            <img src="Images/image (2).png" alt="">
-            <img src="Images/image.png" alt="">
-            <img src="Images/image (3).jpg" alt="">
-            <img src="Images/image (4).jpg" alt="">
-            <img src="Images/image (5).jpg" alt="">
+            <img src="Images/image (1).png" alt="Child playing badminton">
+            <img src="Images/image (2).png" alt="Child playing badminton">
+            <img src="Images/image.png" alt="Coach talking to player">
+            <img src="Images/image (3).jpg" alt="Children playing badminton">
+            <img src="Images/image (4).jpg" alt="Badminton players">
+            <img src="Images/image (5).jpg" alt="Badminton players">
         </div>
     </section>
 
@@ -148,10 +148,12 @@
         </div>
     </section>
 
+    <!-- Meet the committee section -->
     <section id="meet-committee" class="text-center">
         <h1 class="title bold-8 mb-10 t-light">Meet the Club Committee</h1>
         <div id="committee-members">
 
+            <!-- Using same stock image since no images of real people available on existing site, but all roles and names from existing site -->
             <div class="max-w-75 rounded overflow-hidden shadow-lg card">
                 <img class="w-100" src="/Images/man.png" alt="Example of a club committee member">
                 <div class="px-6 py-4 card-text-block">
@@ -211,22 +213,24 @@
         </div>
     </section>
 
+    <!-- Where to find us section, doubling as the contact us section -->
     <section id="where-to-find-us">
         <h1 class="title bold-8 mb-10">Where to Find Us</h1>
         <div id="find-us-grid">
+            <!-- Google maps in an iframe with parking explanitory text below -->
             <div id="map-container">
                 <iframe id="map"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2509.957284989941!2d-3.119894223409186!3d51.016937971705914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486df46062c517c3%3A0xd13ffae589f6534a!2sThe%20Castle%20School!5e0!3m2!1sen!2suk!4v1775126860330!5m2!1sen!2suk"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
                 Our home venue is the sports hall at <span class="bold-7">The Castle School, Wellington Road,
-                    Taunton</span> (TA1 5AU for your
-                satnav).
+                    Taunton</span> (TA1 5AU for your satnav).
                 <br><br>
                 Please note that <span class="bold-7">car parking is by the tennis/netball courts to the rear of the
-                    school</span> in the area shown
-                on the map - parking elsewhere on the neighbouring Bridgwater & Taunton College site may incur a fine.
+                    school</span> in the area shown on the map - parking elsewhere on the neighbouring Bridgwater &
+                Taunton College site may incur a fine.
             </div>
+            <!-- Contact form going through formsubmit for email -->
             <div id="contact-form-find-us">
                 <div id="form-wrapper">
                     <!-- Sending form with the formsubmit API -->
@@ -254,6 +258,7 @@
     </section>
 
 
+    <!-- Footer section, same on every page -->
     <footer class="site-footer">
         <div class="footer-container">
 

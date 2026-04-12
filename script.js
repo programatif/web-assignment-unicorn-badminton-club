@@ -132,3 +132,13 @@ gsap.to("#club-img-carousel img", {
     x: -50,
     ease: "none"
 });
+
+
+// Fill announcements bar with the text from announcements.txt
+const announcementsRibbon = document.getElementById("scrolling-announcements")
+
+const announcements = fetch("/announcements.txt").then(response => {
+    return response.text();
+}).then(data => {
+    announcementsRibbon.innerText = data
+})
