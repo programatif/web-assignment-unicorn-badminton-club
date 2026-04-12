@@ -27,6 +27,7 @@ function applySetting(storageKey, list, val) {
     // Remove all possible classes for this category
     list.forEach(item => document.documentElement.classList.remove(item.name));
 
+    // adds the class to the document html as a whole
     document.documentElement.classList.add(state.name);
 
     if (storageKey === 'theme') {
@@ -49,7 +50,9 @@ function setupCycle(btnId, storageKey, list, val) {
     const btn = document.getElementById(btnId);
     if (!btn) return val;
 
+    // cycles through - if val (initial value) = 0 (first element in array) then "0 + 1 = 2" (which would be the 3rd item in array not second), "modulo 3 (or length of the list) = 1" (which is 2nd item in array)
     btn.addEventListener('click', () => {
+        // this value then gets saved using JS closures (variable "val" is initialised in the parent function but then the memory isn't cleaned up when parent function finishes since the event listener still requires access to the variable, so the function never officially "finishes")
         val = (val + 1) % list.length;
         applySetting(storageKey, list, val);
     });
