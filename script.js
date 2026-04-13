@@ -130,9 +130,9 @@ gsap.to("#club-img-carousel img", {
         trigger: "#club-img-carousel",
         start: "top bottom",
         end: "bottom top",
-        scrub: 1
+        scrub: 2
     },
-    x: -50,
+    x: -200,
     ease: "none"
 });
 
@@ -140,7 +140,7 @@ gsap.to("#club-img-carousel img", {
 // Fill announcements bar with the text from announcements.txt
 const announcementsRibbon = document.getElementById("scrolling-announcements")
 
-const announcements = fetch("/announcements.txt").then(response => {
+const announcements = fetch("announcements.txt").then(response => {
     return response.text();
 }).then(data => {
     announcementsRibbon.innerText = data

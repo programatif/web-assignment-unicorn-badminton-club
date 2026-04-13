@@ -158,11 +158,13 @@ textarea {
 .main {
     background-color: var(--main-1);
     color: var(--light-text-colour);
+    border-color: var(--main-1);
 }
 
 .secondary {
     background-color: var(--secondary);
     color: var(--light-text-colour);
+    border-color: var(--secondary);
 }
 
 .text-green {
@@ -222,12 +224,12 @@ nav a {
     align-items: center;
     justify-content: center;
 
-    color: var(--light-text-colour);
+    color: #000;
 }
 
 /* Hero section */
 #hero {
-    background-image: url("/Images/Shuttlecocks.png");
+    background-image: url("Images/Shuttlecocks.webp");
     background-position: 100% 75%;
     background-size: 115%;
     background-repeat: no-repeat;
@@ -393,7 +395,7 @@ nav a {
 #form-wrapper {
     width: 70%;
     height: 100%;
-    background-image: url("Images/image\ \(2\).png");
+    background-image: url("Images/image\ \(2\).webp");
     background-position: 50% 75%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -444,8 +446,8 @@ nav a {
 
     background-color: var(--main-1);
 
-    mask-image: url('Images/shuttlecock-icon.png');
-    -webkit-mask-image: url('Images/shuttlecock-icon.png');
+    mask-image: url('Images/shuttlecock-icon.webp');
+    -webkit-mask-image: url('Images/shuttlecock-icon.webp');
     mask-size: contain;
     -webkit-mask-size: contain;
     mask-repeat: no-repeat;
@@ -638,7 +640,7 @@ nav a {
 
 /* Pricing Page */
 #pricing-hero {
-    background-image: url("/Images/UnicornBadmintonClub2016_07_Photo_GeoffRoberts.jpg");
+    background-image: url("Images/UnicornBadmintonClub2016_07_Photo_GeoffRoberts.webp");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -703,7 +705,7 @@ nav a {
     /* Hero Section Mobile */
     #hero {
         height: 70vh;
-        background-image: url('Images/player.png');
+        background-image: url('Images/player.webp');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

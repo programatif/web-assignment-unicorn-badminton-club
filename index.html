@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Unicorn Badminton Club</title>
     <!-- Logo favicon -->
-    <link rel="shortcut icon" href="Images/Logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="Images/Logo.webp" type="image/x-icon">
 
     <!-- DaisyUI CDN for UI components -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -22,8 +22,8 @@
 
     <!-- Accessibility menu as a "FAB" (Floating Action Button) - from DaisyUI components -->
     <div class="fab">
-        <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-primary bg-main">
-            <i class="bi bi-universal-access-circle text-2xl"></i>
+        <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-primary secondary">
+            <i class="bi bi-universal-access-circle text-2xl" style="color: black;"></i>
         </div>
 
         <div>
@@ -41,7 +41,7 @@
 
     <!-- Navbar -->
     <nav>
-        <img onclick="window.location.href='index.html'" class="cursor-pointer" id="nav-logo" src="/Images/Logo.png" alt="Unicorn Badminton Club Logo">
+        <img onclick="window.location.href='index.html'" class="cursor-pointer" id="nav-logo" src="Images/Logo.webp" alt="Unicorn Badminton Club Logo">
 
         <div id="mobile-menu-icon">
             <span></span>
@@ -65,7 +65,7 @@
     </nav>
 
     <!-- Announcements -->
-    <header id="announcements-ribbon" class="bg-main">
+    <header id="announcements-ribbon" class="secondary">
         <!-- Filled in by JS -->
         <marquee id="scrolling-announcements" direction="left"></marquee>
     </header>
@@ -96,17 +96,17 @@
                 and
                 to gain an introduction to a lifetime of healthy, enjoyable sport.
             </p>
-            <img src="Images/boy-playing.png" alt="Boy playing badminton">
+            <img src="Images/boy-playing.webp" alt="Boy playing badminton">
         </div>
 
         <!-- Image carousel -->
         <div id="club-img-carousel">
-            <img src="Images/image (1).png" alt="Child playing badminton">
-            <img src="Images/image (2).png" alt="Child playing badminton">
-            <img src="Images/image.png" alt="Coach talking to player">
-            <img src="Images/image (3).jpg" alt="Children playing badminton">
-            <img src="Images/image (4).jpg" alt="Badminton players">
-            <img src="Images/image (5).jpg" alt="Badminton players">
+            <img src="Images/image (1).webp" alt="Child playing badminton">
+            <img src="Images/image (2).webp" alt="Child playing badminton">
+            <img src="Images/image.webp" alt="Coach talking to player">
+            <img src="Images/image (3).webp" alt="Children playing badminton">
+            <img src="Images/image (4).webp" alt="Badminton players">
+            <img src="Images/image (5).webp" alt="Badminton players">
         </div>
     </section>
 
@@ -153,9 +153,9 @@
         <h1 class="title bold-8 mb-10 t-light">Meet the Club Committee</h1>
         <div id="committee-members">
 
-            <!-- Using same stock image since no images of real people available on existing site, but all roles and names from existing site -->
+            <!-- Using same stock image since no Images of real people available on existing site, but all roles and names from existing site -->
             <div class="max-w-75 rounded overflow-hidden shadow-lg card">
-                <img class="w-100" src="/Images/man.png" alt="Example of a club committee member">
+                <img class="w-100" src="Images/man.webp" alt="Example of a club committee member">
                 <div class="px-6 py-4 card-text-block">
                     <div class="font-bold mb-2">Steve Harrison</div>
                     <p class="text-base">
@@ -165,7 +165,7 @@
             </div>
 
             <div class="max-w-75 rounded overflow-hidden shadow-lg card">
-                <img class="w-100" src="/Images/man.png" alt="Example of a club committee member">
+                <img class="w-100" src="Images/man.webp" alt="Example of a club committee member">
                 <div class="px-6 py-4 card-text-block">
                     <div class="font-bold mb-2">Martyn Giles</div>
                     <p class="text-base">
@@ -174,7 +174,7 @@
                 </div>
             </div>
             <div class="max-w-75 rounded overflow-hidden shadow-lg card">
-                <img class="w-100" src="/Images/man.png" alt="Example of a club committee member">
+                <img class="w-100" src="Images/man.webp" alt="Example of a club committee member">
                 <div class="px-6 py-4 card-text-block">
                     <div class="font-bold mb-2"> Vic Pizzey</div>
                     <p class="text-base">
@@ -183,7 +183,7 @@
                 </div>
             </div>
             <div class="max-w-75 rounded overflow-hidden shadow-lg card">
-                <img class="w-100" src="/Images/man.png" alt="Example of a club committee member">
+                <img class="w-100" src="Images/man.webp" alt="Example of a club committee member">
                 <div class="px-6 py-4 card-text-block">
                     <div class="font-bold mb-2">Kez Cracknell</div>
                     <p class="text-base">
@@ -192,7 +192,7 @@
                 </div>
             </div>
             <div class="max-w-75 rounded overflow-hidden shadow-lg card">
-                <img class="w-100" src="/Images/man.png" alt="Example of a club committee member">
+                <img class="w-100" src="Images/man.webp" alt="Example of a club committee member">
                 <div class="px-6 py-4 card-text-block">
                     <div class="font-bold mb-2">Geoff Roberts</div>
                     <p class="text-base">
@@ -201,7 +201,7 @@
                 </div>
             </div>
             <div class="max-w-75 rounded overflow-hidden shadow-lg card">
-                <img class="w-100" src="/Images/man.png" alt="Example of a club committee member">
+                <img class="w-100" src="Images/man.webp" alt="Example of a club committee member">
                 <div class="px-6 py-4 card-text-block">
                     <div class="font-bold mb-2">Lucy Paul</div>
                     <p class="text-base">
@@ -219,7 +219,7 @@
         <div id="find-us-grid">
             <!-- Google maps in an iframe with parking explanitory text below -->
             <div id="map-container">
-                <iframe id="map"
+                <iframe title="The Castle School Google Maps" id="map"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2509.957284989941!2d-3.119894223409186!3d51.016937971705914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486df46062c517c3%3A0xd13ffae589f6534a!2sThe%20Castle%20School!5e0!3m2!1sen!2suk!4v1775126860330!5m2!1sen!2suk"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -264,7 +264,7 @@
 
             <div class="footer-column branding">
                 <div class="logo">
-                    <img src="Images/Logo.png" alt="Unicorn Badminton Club Logo">
+                    <img src="Images/Logo.webp" alt="Unicorn Badminton Club Logo">
                 </div>
                 <p>Unicorn Badminton Club is a small, friendly club of league and club players, students, junior players
                     and coaches.</p>
